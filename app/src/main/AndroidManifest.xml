@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sahityadiary.hindinetex">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="sahityadiary.hindinetex.HomeScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="sahityadiary.hindinetex.NotesActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="sahityadiary.hindinetex.HomeScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sahityadiary.hindinetex.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name="sahityadiary.hindinetex.NoteDetailsActivity"
+            android:parentActivityName="sahityadiary.hindinetex.NotesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sahityadiary.hindinetex.NotesActivity" />
+        </activity>
+        <activity
+            android:name="sahityadiary.hindinetex.MCQActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="sahityadiary.hindinetex.HomeScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sahityadiary.hindinetex.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name="sahityadiary.hindinetex.QuizActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="sahityadiary.hindinetex.MCQActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sahityadiary.hindinetex.MCQActivity" />
+        </activity>
+        <activity
+            android:name="sahityadiary.hindinetex.QuestionsActivity"
+            android:parentActivityName="sahityadiary.hindinetex.QuizActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sahityadiary.hindinetex.QuizActivity" />
+        </activity>
+        <activity
+            android:name="sahityadiary.hindinetex.ShortNoteActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="sahityadiary.hindinetex.HomeScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sahityadiary.hindinetex.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name="sahityadiary.hindinetex.ShortNoteDetailsActivity"
+            android:parentActivityName="sahityadiary.hindinetex.ShortNoteActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sahityadiary.hindinetex.ShortNoteActivity" />
+        </activity>
+    </application>
+
+</manifest>
